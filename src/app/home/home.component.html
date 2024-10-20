@@ -1,0 +1,32 @@
+<div [ngClass]="{'cardAllignment' : taskCardDetails.length>0}" class="main-container">
+  <div class="card-container">
+    <div *ngFor="let task of taskCardDetails;let index = index" class="card me-5">
+       <div class="card-header">
+         <h5>{{ task.taskName }}</h5>
+       </div>
+       <div class="card-body">
+         <p><strong>Description:</strong> {{ task.taskDescription }}</p>
+         <p><strong>Budget Estimate:</strong> {{ task.taskAmount }} Rs</p>
+       </div>
+       <!-- <div class="card-footer">
+         <button class="btn-view" (click)="viewTaskDetails(task)">View Details</button>
+         <button class="btn-edit" (click)="editTask(task)">Edit</button>
+       </div> -->
+     </div>
+  </div>
+  <ng-container *ngIf="this.commonService.addTask; else addUserIconTemplate">
+    <button (click)="openModal()"> <i class="fa fa-plus icon-color icon-size" aria-hidden="true"></i></button>
+  </ng-container>
+  
+  <ng-template #addUserIconTemplate>
+    <button (click)="openModal()">
+      <i class="fa fa-calendar fa-calendar-plus-o icon-color"></i>
+    </button>
+  </ng-template>
+
+ <app-add-trip-modal [showModal]="showModal" [modalTitle]="'Add New Trip'"
+                     [addTask]="this.commonService.addTask" (save)="onSave()" (cancel)="onCancel()"></app-add-trip-modal>
+                    
+                    
+</div>
+

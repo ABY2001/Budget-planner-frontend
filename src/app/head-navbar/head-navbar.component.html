@@ -1,0 +1,10 @@
+<nav class="navbar-container">
+  <ng-container *ngIf="userArray.length == 1">
+    <ul *ngFor="let budget of userArray">
+      <li class="top-nav-icons fs-3">
+        <i class="fa fa-user pe-3 icon-size" aria-hidden="true"></i>{{ budget.firstName }}
+      </li>
+      <li>Budget balance: {{ budget.budgetAmount }} Rs</li>
+    </ul>
+  </ng-container>
+</nav>

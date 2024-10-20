@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+.main-layout {
+    display: flex;
+  }
+  
+  .icon:hover {
+    background-color: #f6f0f0;
+    color: rgba(144, 206, 198, 0.98) !important; 
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .icon-color{
+   color: rgba(144, 206, 198, 0.98);    
+  }
+
+  .btn-color {
+   background-color: rgba(144, 206, 198, 0.98) !important;  
+   color: #fff !important; 
+  }
+
+  .heading-styles{
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 600;
+   color:rgba(144, 206, 198, 0.98);
+   font-size: 20px;
+  }
+
+  .icon-size {
+    font-size: 28px;
+  }

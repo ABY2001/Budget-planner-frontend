@@ -1,0 +1,29 @@
+/* The main layout containing the left navbar and content */
+.main-layout {
+    display: flex;
+    height: 100vh;  /* Full viewport height */
+    padding-top: 55px;  /* Same height as the header to push content down */
+  }
+  
+  /* Left navbar */
+  app-left-navbar {
+    width: 50px;  /* Reduced width for the left navbar */
+    height: calc(100vh - 55px);  /* Full height minus the height of the header */
+    position: fixed;
+    top: 55px;  /* Start right below the header */
+    left: 0;
+    z-index: 5;
+  }
+  
+  /* Content container for the router-outlet */
+  .content-container {
+    margin-left: 60px;
+    padding: 20px;
+    width: calc(100% - 62px);  /* Adjusted width based on the left navbar */
+    height: calc(100vh - 55px);  /* Full height minus the header */
+    background-color: #f4f4f4;
+    z-index: 1;
+    position: relative;
+    overflow-y: auto;  /* Scrollable if the content exceeds the viewport */
+  }
+  

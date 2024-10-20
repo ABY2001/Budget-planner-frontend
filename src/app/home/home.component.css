@@ -1,0 +1,94 @@
+.main-container {
+    display: flex;       
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;                 
+    background-color: #f4f4f4;   
+  }
+  
+  .main-container div {
+    text-align: center;       
+  }
+  
+  .fa-calendar{
+    font-size:48px;
+    cursor: pointer;
+  }
+  
+
+  .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  width: 300px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid rgba(144, 206, 198, 0.98);  /* Custom color border */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: rgba(144, 206, 198, 0.98);  /* Custom color for title */
+  text-align: center;
+}
+
+.card-body p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-view,
+.btn-edit {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view {
+  background-color:rgba(144, 206, 198, 0.98); 
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-view:hover {
+  background-color: rgba(144, 206, 198, 0.98);  /* Darker shade on hover */
+}
+
+.btn-edit:hover {
+  background-color: #ccc;
+}
+
+.cardAllignment {
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-right: 20px;
+}
